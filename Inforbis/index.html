@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<link rel="stylesheet" href="inforbis.css">
-  	<script type=>
-  	</script>
-  </head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="inforbis.css">
+
+  	
+	</head>
   <body style="top:0; margin:0;">
-  	<div class="topmenu">
+  	<div class="topmenu" id="topx">
   		<div class="logo">
   			<img src="Logo.png"/>
   	  	</div>
@@ -29,7 +31,7 @@
   		</div>
     </div>
   	<div class="topbanner">	
-  		<div class="topbannertext"><span>Svladajte s nama izazove digitalne transformacije</span></div>
+  		<div class="topbannertext"><span>Savladajte s nama izazove digitalne transformacije</span></div>
   	</div>
     <div class="services">
     	USLUGE
@@ -90,6 +92,28 @@
     </div>
       <div class="footer">
       </div>
+
+			<script>
+
+				window.onload = ()=> {
+
+				document.onscroll = () =>{
+
+					var topm =  document.getElementById("topx");
+
+					 console.log(window.pageYOffset);
+					if(window.pageYOffset > 350) {
+						topm.style.visibility = "hidden";
+					}
+
+					if(window.pageYOffset < 350) {
+						topm.style.visibility = "visible";
+					}
+					
+				};
+			};
+			</script>
+	
 
   </body>
 </html>
